@@ -112,6 +112,7 @@
     NSString * method = @"GET";
     NSString * href = [self linkForRel:linkRel];
     if (href != nil) {
+        NSLog(@"following %@", href);
         href = [href stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         NSURL *url = [[NSURL alloc] initWithString:href];
         NSMutableURLRequest * req = [[NSMutableURLRequest alloc] initWithURL:url];
